@@ -1,0 +1,20 @@
+{% extends 'enclopedia/layout.html' %}
+
+{% block content %}
+<h1>Greetins my folllwers </h1>
+{% if conditon %}
+    <h1 style="color: green">True</h1>
+{% else %}
+    <h1 style="color: red">False</h1>
+{% endif %}
+<ul>
+    {% for n in list_of_names %}
+        {% if n == 'marwa' %}
+            {{ n }}
+        {% else %}
+        <li>{{ n }}</li>
+        {% endif %}
+
+    {% endfor %}
+</ul>
+{% endblock content %}

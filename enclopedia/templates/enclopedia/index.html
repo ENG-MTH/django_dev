@@ -1,0 +1,35 @@
+
+{% extends 'enclopedia/layout.html' %}
+{% block extra_header %}
+    <style>
+    .whatever{
+        color: brown;
+    }
+    </style>
+{% endblock extra_header %}
+{% block content %}
+
+<h1>Hello {{ name }} </h1>
+{% if conditon %}
+    <h1 style="color: green">True</h1>
+{% else %}
+    <h1 style="color: red">False</h1>
+{% endif %}
+<ul>
+    {% for n in list_of_names %}
+        {% if n == 'marwa' %}
+            {{ n }}
+        {% else %}
+        <li class=whatever>{{ n }}</li>
+        {% endif %}
+
+    {% endfor %}
+{% endblock content %}
+
+
+
+
+
+</ul>
+
+
